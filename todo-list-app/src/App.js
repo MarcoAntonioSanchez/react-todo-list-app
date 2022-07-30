@@ -2,8 +2,14 @@ import Todo from "./components/Todo";
 
 function App(props) {
   // Transforming data from a constant
+  // key id share the same value (.id), unique keys are important for React apps (must do)
   const taskList = props.tasks.map((task) => (
-    <Todo id={task.id} name={task.name} completed={task.completed} />
+    <Todo
+      id={task.id}
+      name={task.name}
+      completed={task.completed}
+      key={task.id}
+    />
   ));
 
   return (
