@@ -1,3 +1,6 @@
+import React from "react";
+import Form from "./components/Form";
+import FilterButton from "./components/FilterButton";
 import Todo from "./components/Todo";
 
 function App(props) {
@@ -16,11 +19,12 @@ function App(props) {
     <div className="todoapp stack-large">
       <h1>TodoMatic</h1>
       <form>
-        <h2 className="label-wrapper">
-          <label htmlFor="new-todo-input" className="label__lg">
-            What needs to be done?
-          </label>
-        </h2>
+        <div className="filters btn-group stack-exception">
+          <FilterButton />
+          <FilterButton />
+          <FilterButton />
+        </div>
+        <h2 className="label-wrapper"></h2>
         <input
           type="text"
           id="new-todo-input"
