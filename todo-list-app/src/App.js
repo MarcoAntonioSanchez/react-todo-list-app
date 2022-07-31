@@ -4,6 +4,10 @@ import FilterButton from "./components/FilterButton";
 import Todo from "./components/Todo";
 
 function App(props) {
+  function addTask(name) {
+    alert(name);
+  }
+
   // Transforming data from a constant
   // key id share the same value (.id), unique keys are important for React apps (must do)
   const taskList = props.tasks.map((task) => (
@@ -18,7 +22,7 @@ function App(props) {
   return (
     <div className="todoapp stack-large">
       <h1>TodoMatic</h1>
-      <form />
+      <Form addTask={addTask} />
       <div className="filters btn-group stack-exception">
         <FilterButton />
         <FilterButton />
