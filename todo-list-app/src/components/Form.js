@@ -1,7 +1,11 @@
 // Importando librerias de react para el componente
-import React from "react";
+// Adding userState to the import statement to set a hook on props
+import React, { useState } from "react";
 
 function Form(props) {
+  // Declaring the const props as an array to show and update name prop
+  const [name, setName] = useState("Use Hooks!");
+
   function handleSubmit(e) {
     e.preventDefault();
     props.addTask("Say Hello!");
